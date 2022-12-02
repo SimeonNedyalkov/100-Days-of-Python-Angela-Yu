@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% include 'header.html' %}
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <h1>Bulgarian Rose Oil</h1>
+    <div>
+    <img class="rose" src="static/rose.png">
+    <img class="img_oil" src="static/rose-oil.jpg" alt="Italian Trulli">
+    <h2>Wholesale Private Label <br> 100% Pure bulk Skin Care Massage Oil <br> Natural Organic Rose Flower Petal rose essential oil For Face and Body</h2>
+    {% if current_user.is_authenticated %}
+        <h2>👇👇👇 Buy now 👇👇👇</h2>
+    </div>
+        <form action="/create-checkout-session" method="POST">
+        <div class="d-flex justify-content-center">
+        <button name="btn" type="submit" id="checkout-button">Buy now</button>
+        </div>
+      </form>
+    {% else %}
+    <a class="else" href="{{url_for('register')}}">Register, if you'd like to buy this item</a>
+    {% endif %}
+
+</div>
+{%endblock %}
+</body>
+</html>
