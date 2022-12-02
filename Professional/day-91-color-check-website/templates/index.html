@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Flask Image Upload</h1>
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        {% for error in form.photo.errors %}
+         <span style="color:red;">{{error}}</span>
+        {% endfor %}
+        <div class="row justify-content-center">
+            <div class="col-auto">
+                {{form.photo(class='form-control') }}
+
+            </div>
+            <div class="col-auto">
+                {{form.submit(class='btn btn-success')}}
+
+            </div>
+
+        </div>
+
+    </form>
+    {% if file_url %}
+        <div class="mt-5">
+            <img src="{{file_url}}" style="width:400px;">
+        </div>
+    {% endif %}
+    {% for items, keys in colors.items() %}
+        <div class="mt-5">
+            <h4>{{ items }}</h4>
+            <h4>{{ keys }}</h4>
+        </div>
+    {% endfor %}
+</body>
+</html>
