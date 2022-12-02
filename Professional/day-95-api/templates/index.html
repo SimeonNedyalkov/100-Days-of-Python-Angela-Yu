@@ -1,0 +1,9 @@
+{% include 'header.html' %}
+<body>
+    <h1>Best Brewery site</h1>
+    <h2>Allows you to search for your favourite brewery💚</h2>
+    {% for brew in all_brews %}
+    <a name="brews" href="{{url_for('singlebrewery', id = brew.id)}}">{{brew.name}} <br></a>
+    {% endfor %}
+</body>
+</html>
