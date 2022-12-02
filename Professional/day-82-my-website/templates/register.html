@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'header.html' %}
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <form action="{{url_for('register')}}" method="post">
+    <h2>{{form.email.label}}<br>{{form.email(size=30)}}</h2><br>
+    <h2>{{form.password.label}}<br>{{form.password(size=30)}}</h2>
+     <h2>{{form.submit}}</h2>
+     </form>
+    {% endblock %}
+</body>
+</html>

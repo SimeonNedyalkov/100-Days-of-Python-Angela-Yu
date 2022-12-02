@@ -1,0 +1,52 @@
+/*Navbar*/
+nav {
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*Body*/
+body {
+background-color: #BAD1C2 !important;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+h2{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+#sami {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 20%;
+}
+.hello {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*About me page*/
+.aboutme {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.lorenipsum {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+    padding-left: 25%;
+    padding-right: 25%;
+    font-size: 26px;
+}
+.github {
+    font-size: 26px;
+    text-align:center;
+    display:block;
+}

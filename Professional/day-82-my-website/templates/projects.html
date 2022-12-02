@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'header.html' %}
+</head>
+<body>
+    {% extends 'base.html' %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+    <h1>Here are all the projects that I have made with the course "100 days of code" by Angela Yu</h1>
+    <a class="github" href="https://github.com/SimeonNedyalkov/100-Days-of-Python-Angela-Yu">Click here for my github</a>
+    {% endblock %}
+</body>
+</html>
