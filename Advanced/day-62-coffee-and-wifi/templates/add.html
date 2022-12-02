@@ -1,0 +1,42 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %}Add A New Cafe{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+
+<style>
+{% block styling %}
+  body {
+   color: black;
+  }
+h1 {
+color: black;
+}
+{% endblock %}
+</style>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <form>
+      <h1>Add a new cafe into the database</h1>
+        {{ form.cafe.label }} <br> {{ form.cafe(size=30) }} <br>
+        {{ form.location.label }} <br> {{ form.location(size=30) }} <br>
+        {{ form.open.label }} <br> {{ form.open(size=30) }} <br>
+        {{ form.close.label }} <br> {{ form.close(size=30) }} <br>
+        {{ form.coffee.label }} <br> {{ form.coffee }} <br>
+        {{ form.wifi.label }} <br> {{ form.wifi}} <br>
+        {{ form.power.label }} <br> {{ form.power}} <br>
+        <br> {{ form.submit }} <br>
+        <a href="{{url_for('cafes')}}">cafes</a>
+      <!-- This is where your WTForm will go -->
+        </form>
+	  <p class="space-above"><a href="/cafes">See all cafes</a></p>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
