@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe&Wifi API</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <h1>Caffes with wifi</h1>
+    {% for cafe in list_of_cafes %}
+    {% if cafe['has_wifi'] == 1 %}
+    <h2>{{cafe['name']}}</h2>
+    <a class="location" href="{{cafe['map_url']}}">location</a>
+    <img class="image" src="{{cafe['img_url']}}" width="200", height="100">
+    {% endif %}
+    {% endfor %}
+</body>
+</html>

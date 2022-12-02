@@ -1,0 +1,21 @@
+h1{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+h2{
+    text-align: center;
+}
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.location{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  width: 0%;
+}
