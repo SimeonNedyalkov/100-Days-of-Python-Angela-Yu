@@ -1,2 +1,2 @@
 * linguist-vendored
-*.rb linguist-language=Python
+*.js linguist-vendored=false
